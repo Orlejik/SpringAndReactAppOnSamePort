@@ -1,0 +1,2 @@
+- How to impliment OAuth2 with JWT Tocken to Spring application: https://www.geeksforgeeks.org/spring-boot-oauth2-with-jwt/
+
