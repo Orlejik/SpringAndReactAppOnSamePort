@@ -7,7 +7,6 @@
     <list default="true" id="6e1be2f2-da42-4e10-acc5-83e82ea068e5" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/frontend/src/AuthProvider/AuthProvider.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/frontend/src/AuthProvider/ProtectedRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/AuthProvider/Routes.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/AboutUsComponent/AboutUsComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/LogoutComponent/LogoutComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/LoginComponent/LoginComponent.jsx" afterDir="false" />
@@ -15,15 +14,14 @@
       <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/ServicesComponent/ServicesComponent.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/frontend/src/Images/bg.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/frontend/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/RegisterComponent/RegisterComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/RegisterComponent/RegisterComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/RegisterComponent/Styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/RegisterComponent/Styles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Modificators/HideComponenets/HideComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Modificators/HideComponenets/HideComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,20 +59,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.DemoApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/artiom.oriol/OneDrive - Microinvest/Documents/JavaSpring/demo",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.DemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/artiom.oriol/OneDrive - Microinvest/Documents/JavaSpring/demo&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplication" />
