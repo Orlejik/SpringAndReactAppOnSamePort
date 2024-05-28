@@ -5,31 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e1be2f2-da42-4e10-acc5-83e82ea068e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/access-refresh-token-keys/access-token-private.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/access-refresh-token-keys/access-token-public.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/access-refresh-token-keys/refresh-token-private.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/access-refresh-token-keys/refresh-token-public.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Components/HomeComponenet/HomeComponenet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/HomeComponenet/HomeComponenet.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/Modals/LoginModal/LoginModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/Modals/LoginModal/LoginModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/NavBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/RegisterComponent/RegisterComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/Components/NavBar/RegisterComponent/RegisterComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/AuthenticationConfig/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/AuthenticationConfig/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/AuthenticationConfig/SecurityOAuthConfig/KeyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/AuthenticationConfig/SecurityOAuthConfig/KeyUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/AuthenticationConfig/SecurityOAuthConfig/WebSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/AuthenticationConfig/SecurityOAuthConfig/WebSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/AuthenticationConfig/UserDocument/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/AuthenticationConfig/UserDocument/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/DemoApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
