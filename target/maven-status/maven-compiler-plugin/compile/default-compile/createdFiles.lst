@@ -1,1 +1,15 @@
+com\example\demo\AuthenticationConfig\UserDocument\SignUp.class
 com\example\demo\DemoApplication.class
+com\example\demo\AuthenticationConfig\SecurityOAuthConfig\KeyUtils.class
+com\example\demo\AuthenticationConfig\SecurityOAuthConfig\TokenGenerator.class
+com\example\demo\AuthenticationConfig\UserDocument\User.class
+com\example\demo\AuthenticationConfig\SecurityOAuthConfig\JWTtoUserConvertor.class
+com\example\demo\AuthenticationConfig\Service\UserManager.class
+com\example\demo\AuthenticationConfig\UserDocument\UserDTO$UserDTOBuilder.class
+com\example\demo\AuthenticationConfig\Repository\UserRepository.class
+com\example\demo\AuthenticationConfig\SecurityOAuthConfig\WebSecurity.class
+com\example\demo\AuthenticationConfig\UserModel\Token.class
+com\example\demo\AuthenticationConfig\UserDocument\UserDTO.class
+com\example\demo\AuthenticationConfig\UserModel\Login.class
+com\example\demo\AuthenticationConfig\Controllers\AuthController.class
+com\example\demo\AuthenticationConfig\Controllers\UserController.class

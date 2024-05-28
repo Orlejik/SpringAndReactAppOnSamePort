@@ -1,83 +1,112 @@
 package com.example.demo.AuthenticationConfig.UserDocument;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import org.jetbrains.annotations.NotNull;
+import java.util.Collection;
+import java.util.Collections;
+
+import jakarta.persistence.Column;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
-import java.util.Collections;
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.mongodb.lang.NonNull;
 
+import lombok.Data;
+//import lombok.Getter;
+//import lombok.NoArgsConstructor;
+//import lombok.RequiredArgsConstructor;
+//import lombok.Setter;
 
 @Document
 @Data
-@RequiredArgsConstructor
-@NoArgsConstructor
+//@RequiredArgsConstructor
+//@NoArgsConstructor
 public class User implements UserDetails {
 
-    @Getter
     @Id
+    @Column(name = "_id", unique = true)
     private String id;
 
-    @NotNull
-    private String username;
+    @NonNull
+    @Column(name = "Name", unique = true)
+    private String userName;
 
-
-    @NotNull
+    @NonNull
+    @Column(name = "password")
     private String password;
 
-    public User(String id, String username, String password){
+
+
+    // Other fields or methods can be added as needed
+    public User() {
+
+    }
+    public User(String id, String userName, String password) {
         super();
-        this.id=id;
-        this.username = username;
+        this.id = id;
+        this.userName = userName;
+        this.password = password;
+    }
+    public User( String userName, String password) {
+        super();
+
+        this.userName = userName;
         this.password = password;
     }
 
-    public void setId(String id) {
-        this.id = id;
+
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        // TODO Auto-generated method stub
+        this.id = id;
 
-//    Methods
+    }
 
-    public Collection<? extends GrantedAuthority> getAuthorities(){
+    // Methods required by Spring Security for user details
+    public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.emptyList();
     }
 
-    @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
-    @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
-    @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
-    @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
-
-    public String getUsername(){
+    @Override
+    public String getUsername() {
+        // TODO Auto-generated method stub
         return null;
     }
+
+
+
 }

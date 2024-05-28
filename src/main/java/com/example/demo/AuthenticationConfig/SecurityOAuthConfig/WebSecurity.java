@@ -1,7 +1,5 @@
 package com.example.demo.AuthenticationConfig.SecurityOAuthConfig;
 
-import com.example.demo.AuthenticationConfig.SecurityOAuthConfig.JWTtoUserConvertor;
-import com.example.demo.AuthenticationConfig.SecurityOAuthConfig.KeyUtils;
 import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
@@ -18,6 +16,7 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
@@ -28,7 +27,6 @@ import org.springframework.security.oauth2.server.resource.web.BearerTokenAuthen
 import org.springframework.security.oauth2.server.resource.web.access.BearerTokenAccessDeniedHandler;
 import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
-import static org.springframework.security.config.http.SessionCreationPolicy.*;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -36,7 +34,7 @@ import static org.springframework.security.config.http.SessionCreationPolicy.*;
 @Slf4j
 public class WebSecurity {
     @Autowired
-    JWTtoUserConvertor jwttoUserConvertor;
+    JWTtoUserConvertor jwtToUserConverter;
     @Autowired
     KeyUtils keyUtils;
     @Autowired
@@ -45,30 +43,43 @@ public class WebSecurity {
     UserDetailsManager userDetailsManager;
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .authorizeHttpRequests((authorize)->authorize.requestMatchers("/api/auth/*").permitAll().anyRequest().authenticated())
-                .csrf(csrf->csrf.disable())
+                .authorizeHttpRequests((authorize) -> authorize
+                        .requestMatchers("/api/auth/*").permitAll()
+                        .anyRequest().authenticated()
+                )
+                .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.disable())
                 .httpBasic(basic -> basic.disable())
-                .oauth2ResourceServer((oauth2)-> oauth2.jwt((jwt)->jwt.jwtAuthenticationConverter(jwttoUserConvertor)))
-                .sessionManagement((session)->session.sessionCreationPolicy(STATELESS))
-                .exceptionHandling((exceptions)->exceptions.authenticationEntryPoint(new BearerTokenAuthenticationEntryPoint()).accessDeniedHandler(new BearerTokenAccessDeniedHandler()));
+                .oauth2ResourceServer((oauth2) ->
+                        oauth2.jwt((jwt) -> jwt.jwtAuthenticationConverter(jwtToUserConverter))
+                )
+                .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .exceptionHandling((exceptions) -> exceptions
+                        .authenticationEntryPoint(new BearerTokenAuthenticationEntryPoint())
+                        .accessDeniedHandler(new BearerTokenAccessDeniedHandler())
+                );
         return http.build();
     }
 
     @Bean
     @Primary
-    JwtDecoder jwtAccessTokenDecoder(){
+    JwtDecoder jwtAccessTokenDecoder() {
         return NimbusJwtDecoder.withPublicKey(keyUtils.getAccessTokenPublicKey()).build();
     }
+
     @Bean
     @Primary
-    JwtEncoder jwtAccessTokenEncoder(){
-        JWK jwk = new RSAKey.Builder(keyUtils.getAccessTokenPublicKey()).privateKey(keyUtils.getAccessTokenPrivateKey()).build();
+    JwtEncoder jwtAccessTokenEncoder() {
+        JWK jwk = new RSAKey
+                .Builder(keyUtils.getAccessTokenPublicKey())
+                .privateKey(keyUtils.getAccessTokenPrivateKey())
+                .build();
         JWKSource<SecurityContext> jwks = new ImmutableJWKSet<>(new JWKSet(jwk));
         return new NimbusJwtEncoder(jwks);
     }
+
     @Bean
     @Qualifier("jwtRefreshTokenDecoder")
     JwtDecoder jwtRefreshTokenDecoder() {
@@ -90,7 +101,7 @@ public class WebSecurity {
     @Qualifier("jwtRefreshTokenAuthProvider")
     JwtAuthenticationProvider jwtRefreshTokenAuthProvider() {
         JwtAuthenticationProvider provider = new JwtAuthenticationProvider(jwtRefreshTokenDecoder());
-        provider.setJwtAuthenticationConverter(jwttoUserConvertor);
+        provider.setJwtAuthenticationConverter(jwtToUserConverter);
         return provider;
     }
 
