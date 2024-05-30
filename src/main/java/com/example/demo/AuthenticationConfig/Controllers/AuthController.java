@@ -37,19 +37,16 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody SignUp signupDTO) {
-        User user = new User(signupDTO.getUserName(), signupDTO.getPassword());
+        User user = new User(signupDTO.getUserName(),signupDTO.getFirstName() ,signupDTO.getMidleName(), signupDTO.getLastName(), signupDTO.getGender(), signupDTO.getBirthDate(), signupDTO.getUserEmail(), signupDTO.getPassword());
         userDetailsManager.createUser(user);
 
         Authentication authentication = UsernamePasswordAuthenticationToken.authenticated(user, signupDTO.getPassword(), Collections.EMPTY_LIST);
-
         return ResponseEntity.ok(tokenGenerator.createToken(authentication));
     }
 
-
-
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody Login loginDTO) {
-        Authentication authentication = daoAuthenticationProvider.authenticate(UsernamePasswordAuthenticationToken.unauthenticated(loginDTO.getUserName(), loginDTO.getPassword()));
+        Authentication authentication = daoAuthenticationProvider.authenticate(UsernamePasswordAuthenticationToken.unauthenticated(loginDTO.getEmail(), loginDTO.getPassword()));
 
         return ResponseEntity.ok(tokenGenerator.createToken(authentication));
     }

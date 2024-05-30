@@ -34,7 +34,7 @@ public class UserManager implements UserDetailsManager {
     }
 
     @Override
-    public void deleteUser(String username) {
+    public void deleteUser(String email) {
 // You can implement this method to delete a user by username
         // Typically used when a user wants to delete their account
     }
@@ -46,18 +46,18 @@ public class UserManager implements UserDetailsManager {
     }
 
     @Override
-    public boolean userExists(String username) {
+    public boolean userExists(String email) {
         return false;
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         // Fetch the user from the repository by username
-        Optional<User> userOptional = userRepository.findByUserName(username);
+        Optional<User> userOptional = userRepository.findByUserEmail(email);
 
         //Check if User exists
         if (userOptional.isEmpty()) {
-            throw new UsernameNotFoundException(MessageFormat.format("User with username {0} not found", username));
+            throw new UsernameNotFoundException(MessageFormat.format("User with username {0} not found", email));
         }
 
         // Return the UserDetails extracted from the User entity

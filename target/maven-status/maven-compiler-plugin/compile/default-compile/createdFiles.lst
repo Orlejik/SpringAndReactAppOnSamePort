@@ -13,3 +13,4 @@ com\example\demo\AuthenticationConfig\UserDocument\UserDTO.class
 com\example\demo\AuthenticationConfig\UserModel\Login.class
 com\example\demo\AuthenticationConfig\Controllers\AuthController.class
 com\example\demo\AuthenticationConfig\Controllers\UserController.class
+com\example\demo\AuthenticationConfig\Helpers\AutoGenForID.class
